@@ -1,6 +1,12 @@
-let lock = (builtins.fromJSON (builtins.readFile ./flake.lock)).nodes.nixpkgs.locked;
-in
-import (fetchTarball {
-  url = "https://github.com/nixos/nixpkgs/archive/${lock.rev}.tar.gz";
-  sha256 = lock.narHash;
-})
+{ outputs, ... }: {
+  nixpkgs = {
+    # You can add overlays here
+    overlays = [
+      outputs.overlays.modifications
+      outputs.overlays.additions
+    ];
+    config = {
+      allowUnfree = true;
+    };
+  };
+}

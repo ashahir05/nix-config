@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./hardware-configuration.nix
       ../nixpkgs.nix
       ../nix.nix
       ./bootloader.nix
