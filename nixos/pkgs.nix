@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; with inputs.hyprland.packages.${system}; [
+    python3
     git
     neovim
     kitty
