@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; with inputs.hyprland; [
     git
     neovim
     kitty
