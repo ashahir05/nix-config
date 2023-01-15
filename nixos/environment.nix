@@ -10,6 +10,7 @@
     flakeup = "cfgdir && nix flake update ; cd $OLDPWD";
     flake-commit = "cfgdir && git add . && git commit -m \"Automated commit on $(date)\" ; cd $OLDPWD";
     sysup = "flake-commit && sudo nixos-rebuild switch --flake /nix-config/#ashahir-PC";
+    homeup = "flake-commit && home-manager switch --flake /nix-config/#$\{USER\}@ashahir-PC";
     nixup = "sysup && homeup";
   };
 }
