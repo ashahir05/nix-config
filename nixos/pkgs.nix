@@ -9,12 +9,12 @@
     dunst
     polkit-kde-agent
     waybar-hyprland
+    font-awesome
     rofi-wayland
     hyprpaper
     flameshot
     swayidle
     cliphist
-    material-design-icons
   ];
 }
 
