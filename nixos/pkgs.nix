@@ -12,7 +12,8 @@
     hyprpaper
     flameshot
     swayidle
-    clipman
+    cliphist
+    material-design-icons
   ];
 }
 
