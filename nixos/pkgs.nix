@@ -5,7 +5,7 @@
     git
     neovim
     kitty
-    waybar-hyprland
+    hyprland.waybar-hyprland
   ];
 }
 
