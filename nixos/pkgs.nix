@@ -5,7 +5,14 @@
     git
     neovim
     kitty
-    waybar-hyprland
+    dunst
+    polkit-kde-agent
+    eww-wayland
+    rofi-wayland
+    hyprpaper
+    flameshot
+    swayidle
+    clipman
   ];
 }
 
