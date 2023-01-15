@@ -1,5 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
+    ./environment.nix
     ./pkgs.nix
   ];
 
@@ -21,6 +22,8 @@
 
   programs.home-manager.enable = true;
   programs.git.enable = true;
+  programs.git.userName = "Ahmed Shahir Samin";
+  programs.git.userEmail = "ashahir05@gmail.com";
 
   systemd.user.startServices = "sd-switch";
 
