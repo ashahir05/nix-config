@@ -8,7 +8,7 @@
     kitty
     dunst
     polkit-kde-agent
-    eww-wayland
+    waybar-hyprland
     rofi-wayland
     hyprpaper
     flameshot
