@@ -14,6 +14,7 @@
     nerdfonts
     kate
     vscode-fhs
+    kio-gdrive
     google-chrome
   ];
 }
