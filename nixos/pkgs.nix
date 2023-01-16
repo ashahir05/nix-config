@@ -10,6 +10,10 @@
     rustup
     wl-clipboard
     wl-clipboard-x11
+    inter
+    nerdfonts
+    kate
+    vscode-fhs
     google-chrome
   ];
 }
