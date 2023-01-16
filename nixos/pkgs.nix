@@ -4,8 +4,12 @@
   programs.neovim.enable = true;
 
   environment.systemPackages = with pkgs; [
-    python3
     git
+    python3
+    nodejs
+    rustup
+    wl-copy
+    wl-paste
     google-chrome
   ];
 }
