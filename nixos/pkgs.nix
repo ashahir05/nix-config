@@ -8,8 +8,8 @@
     python3
     nodejs
     rustup
-    wl-copy
-    wl-paste
+    wl-clipboard
+    wl-clipboard-x11
     google-chrome
   ];
 }
