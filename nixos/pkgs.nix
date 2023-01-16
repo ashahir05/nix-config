@@ -15,6 +15,7 @@
     kate
     vscode-fhs
     plasma5Packages.kio-gdrive
+    plasma5Packages.sddm-kcm
     google-chrome
   ];
 }
