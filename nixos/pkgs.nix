@@ -14,7 +14,7 @@
     nerdfonts
     kate
     vscode-fhs
-    kio-gdrive
+    plasma5Packages.kio-gdrive
     google-chrome
   ];
 }
