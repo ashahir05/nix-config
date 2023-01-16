@@ -8,10 +8,7 @@
   boot.plymouth.enable = true;
   boot.plymouth.theme = "breeze";
 
-  boot.blacklistedKernelModules = [ "radeon" ];
   boot.kernelParams = [
-    "radeon.cik_support=0"
-    "amdgpu.cik_support=1"
     "quiet"
     "splash"
     "loglevel=3"
