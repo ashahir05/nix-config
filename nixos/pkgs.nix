@@ -1,6 +1,7 @@
 { config, pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
     home-manager
+    gcc
     neovim
     git
     google-chrome
