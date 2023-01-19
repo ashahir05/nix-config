@@ -25,6 +25,9 @@
   programs.git.userName = "Ahmed Shahir Samin";
   programs.git.userEmail = "ashahir05@gmail.com";
 
+  gtk.enable = true;
+  gtk.theme.name = "adw-gtk3"
+
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
