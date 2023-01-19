@@ -6,7 +6,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   boot.plymouth.enable = true;
-  boot.plymouth.theme = "breeze";
 
   boot.kernelParams = [
     "quiet"

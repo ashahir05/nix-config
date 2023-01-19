@@ -1,22 +1,14 @@
-{ config, pkgs, inputs, ... }:
-
-{
-  programs.neovim.enable = true;
-
+{ config, pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
+    home-manager
+    neovim
     git
-    python3
-    nodejs
-    rustup
+    google-chrome
+    vscode-fhs
+    nerdfonts
     wl-clipboard
     wl-clipboard-x11
-    inter
-    nerdfonts
-    kate
-    vscode-fhs
-    plasma5Packages.kio-gdrive
-    plasma5Packages.sddm-kcm
-    google-chrome
+    gnome.gnome-tweaks
+    adw-gtk3
   ];
 }
-

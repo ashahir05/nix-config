@@ -17,7 +17,6 @@
       ./sound.nix
       ./time.nix
       ./users.nix
-      inputs.hyprland.nixosModules.default
     ];
 
 
