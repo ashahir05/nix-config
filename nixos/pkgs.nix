@@ -1,5 +1,6 @@
 { config, pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
+    hplip
     home-manager
     gcc
     neovim
