@@ -1,6 +1,7 @@
 { config, ... }: {
   environment.sessionVariables = {
     EDITOR = "nvim";    
+    QT_STYLE_OVERRIDE = "fusion";
   };
 
   environment.shellAliases = {
