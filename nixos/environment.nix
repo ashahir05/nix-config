@@ -1,5 +1,5 @@
 { config, lib, ... }: {
-  environment.sessionVariables = lib.mkForce {
+  environment.variables = lib.mkForce {
     EDITOR = "nvim";    
     QT_STYLE_OVERRIDE = "fusion";
   };
