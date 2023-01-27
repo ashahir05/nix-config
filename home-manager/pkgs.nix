@@ -2,5 +2,6 @@
   home.packages = with pkgs; [
     sumneko-lua-language-server
     vmpk
+    ripgrep
   ];
 }
