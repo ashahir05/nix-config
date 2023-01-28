@@ -1,4 +1,6 @@
 { config, pkgs, inputs, ... }: {
+  services.flatpak.enable = true;
+  
   environment.systemPackages = with pkgs; [
     hplip
     home-manager
