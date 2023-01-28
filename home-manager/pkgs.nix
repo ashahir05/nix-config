@@ -3,5 +3,6 @@
     sumneko-lua-language-server
     vmpk
     ripgrep
+    musescore
   ];
 }
