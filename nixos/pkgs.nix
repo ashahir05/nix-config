@@ -11,6 +11,7 @@
     wl-clipboard
     wl-clipboard-x11
     gnome.gnome-tweaks
+    tracker
     adw-gtk3
   ];
 }
