@@ -13,5 +13,7 @@
     gnome.gnome-tweaks
     tracker
     adw-gtk3
+    amberol
+    vlc
   ];
 }
