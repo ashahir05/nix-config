@@ -1,4 +1,4 @@
-{ config, lib, ... }: {
+{ config, lib, pkgs, ... }: {
   environment.variables = lib.mkForce {
     EDITOR = "nvim";    
     QT_STYLE_OVERRIDE = "fusion";
