@@ -11,6 +11,8 @@
     wl-clipboard
     wl-clipboard-x11
     gnome.gnome-tweaks
+    gnomeExtensions.espresso
+    gnomeExtensions.paperwm
     tracker
     adw-gtk3
     amberol
