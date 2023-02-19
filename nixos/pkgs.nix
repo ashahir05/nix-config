@@ -8,7 +8,6 @@
     git
     google-chrome
     vscode-fhs
-    nerdfonts
     wl-clipboard
     wl-clipboard-x11
     gnome.gnome-tweaks
