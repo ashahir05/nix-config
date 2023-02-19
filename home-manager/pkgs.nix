@@ -4,5 +4,6 @@
     vmpk
     ripgrep
     musescore
+    flutter
   ];
 }
