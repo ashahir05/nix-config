@@ -1,5 +1,6 @@
 { config, pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
+    wget
     hplip
     home-manager
     gcc
