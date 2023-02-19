@@ -2,6 +2,7 @@
   imports = [
     ./environment.nix
     ./pkgs.nix
+    ./neovim.nix
   ];
 
   nixpkgs = {
