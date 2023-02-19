@@ -1,6 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   programs.neovim.enable = true;
   programs.neovim.plugins = with pkgs; [
-    (pkgs.nvim-treesitter.withPlugins (_: pkgs.tree-sitter.allGrammars))
+    (vimPlugins.nvim-treesitter.withPlugins (_: pkgs.tree-sitter.allGrammars))
   ];
 }
