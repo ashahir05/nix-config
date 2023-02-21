@@ -6,5 +6,6 @@
     musescore
     android-tools
     flutter
+    libGLU
   ];
 }
