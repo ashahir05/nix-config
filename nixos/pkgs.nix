@@ -17,6 +17,6 @@
     adw-gtk3
     amberol
     vlc
-    commonCompress
+    commonsCompress
   ];
 }
