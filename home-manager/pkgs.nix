@@ -4,6 +4,7 @@
     vmpk
     ripgrep
     musescore
+    android-tools
     flutter
   ];
 }
