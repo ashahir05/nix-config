@@ -18,5 +18,6 @@
     amberol
     vlc
     commonsCompress
+    unzip
   ];
 }
