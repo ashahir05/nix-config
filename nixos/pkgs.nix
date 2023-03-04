@@ -3,6 +3,7 @@
     wget
     hplip
     home-manager
+    openbangla-keyboard
     gcc
     neovim
     git
