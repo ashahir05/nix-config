@@ -30,12 +30,12 @@
   gtk.theme.name = "Adw-gtk3";
   gtk.theme.package = pkgs.adw-gtk3;
   home.sessionVariables.GTK_THEME = "Adw-gtk3";
-  gtk3.extraConfig = {
+  gtk.gtk3.extraConfig = {
     Settings = ''
       gtk-application-prefer-dark-theme=1
     '';
   };
-  gtk4.extraConfig = {
+  gtk.gtk4.extraConfig = {
     Settings = ''
       gtk-application-prefer-dark-theme=1
     '';
