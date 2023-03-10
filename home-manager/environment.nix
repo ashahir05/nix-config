@@ -16,7 +16,8 @@
   
   qt = {
     enable = true;
-    platformTheme = "gnome";
+    style.name = "fusion-dark";
+    platformTheme = "gtk";
   }; 
   
   home.shellAliases = {
