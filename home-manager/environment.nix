@@ -16,7 +16,7 @@
   
   qt = {
     enable = true;
-    style.name = "fusion";
+    style.name = "adwaita-dark";
     platformTheme = "gnome";
   }; 
   
