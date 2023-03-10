@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   programs.home-manager.enable = true;
   programs.git.enable = true;
   programs.git.userName = "Ahmed Shahir Samin";
