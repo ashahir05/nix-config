@@ -27,9 +27,7 @@
   programs.git.userEmail = "ashahir05@gmail.com";
 
   programs.bash = {
-    initExtra = ''
-      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-    '';
+    enable = true;
   };
 
   gtk.enable = true;
