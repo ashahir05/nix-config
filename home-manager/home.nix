@@ -26,7 +26,11 @@
   programs.git.userName = "Ahmed Shahir Samin";
   programs.git.userEmail = "ashahir05@gmail.com";
 
-  programs.bash.enable = true;
+  programs.bash = {
+    initExtra = ''
+      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+    '';
+  };
 
   gtk.enable = true;
   gtk.theme.name = "Adw-gtk3";
