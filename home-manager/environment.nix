@@ -9,7 +9,7 @@
   };
 
   gtk.enable = true;
-  gtk.theme.name = "Adw-gtk3";
+  gtk.theme.name = "adw-gtk3-dark";
   gtk.theme.package = pkgs.adw-gtk3;
   
   home.shellAliases = {
