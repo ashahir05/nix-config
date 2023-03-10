@@ -10,6 +10,7 @@
       ./bootloader.nix
       ./desktop.nix
       ./environment.nix
+      ./fonts.nix
       ./locale.nix
       ./networking.nix
       ./pkgs.nix
