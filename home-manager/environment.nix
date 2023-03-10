@@ -17,7 +17,7 @@
   qt = {
     enable = true;
     style.name = "gtk2";
-    platformTheme = "gnome";
+    platformTheme = "gtk";
   }; 
   
   home.shellAliases = {
