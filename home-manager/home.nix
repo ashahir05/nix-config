@@ -27,7 +27,7 @@
   programs.git.userEmail = "ashahir05@gmail.com";
 
   gtk.enable = true;
-  gtk.theme.name = "Adw-gtk3-dark";
+  gtk.theme.name = "Adw-gtk3";
 
   systemd.user.startServices = "sd-switch";
 
