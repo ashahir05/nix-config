@@ -16,7 +16,7 @@
   
   qt = {
     enable = true;
-    style = "gtk2";
+    style.name = "gtk2";
     platformTheme = "gnome";
   }; 
   
