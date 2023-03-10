@@ -16,7 +16,7 @@
   
   qt = {
     enable = true;
-    style.name = "fusion-dark";
+    style.name = "gtk2";
     platformTheme = "gtk";
   }; 
   
