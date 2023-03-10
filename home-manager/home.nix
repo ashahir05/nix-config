@@ -28,7 +28,7 @@
 
   gtk.enable = true;
   gtk.theme.name = "Adw-gtk3";
-  gtk.theme.package = "pkgs.adw-gtk3"
+  gtk.theme.package = "pkgs.adw-gtk3";
 
   systemd.user.startServices = "sd-switch";
 
