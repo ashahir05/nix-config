@@ -28,6 +28,11 @@
 
   gtk.enable = true;
   gtk.theme.name = "Adw-gtk3";
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
 
   systemd.user.startServices = "sd-switch";
 
