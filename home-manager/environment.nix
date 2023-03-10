@@ -9,8 +9,8 @@
   };
 
   gtk.enable = true;
-  # gtk.theme.name = "Adw-gtk3";
-  # gtk.theme.package = pkgs.adw-gtk3;
+  gtk.theme.name = "Adw-gtk3";
+  gtk.theme.package = pkgs.adw-gtk3;
   
   home.shellAliases = {
     
