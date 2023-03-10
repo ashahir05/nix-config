@@ -35,14 +35,10 @@
   gtk.theme.package = pkgs.adw-gtk3;
   home.sessionVariables.GTK_THEME = "Adw-gtk3";
   gtk.gtk3.extraConfig = {
-    Settings = ''
-      gtk-application-prefer-dark-theme=1
-    '';
+    gtk-application-prefer-dark-theme=1;
   };
   gtk.gtk4.extraConfig = {
-    Settings = ''
-      gtk-application-prefer-dark-theme=1
-    '';
+    gtk-application-prefer-dark-theme=1;
   };
 
   systemd.user.startServices = "sd-switch";
