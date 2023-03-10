@@ -27,8 +27,19 @@
   programs.git.userEmail = "ashahir05@gmail.com";
 
   gtk.enable = true;
-  gtk.theme.name = "Adw-gtk3:dark";
+  gtk.theme.name = "Adw-gtk3";
   gtk.theme.package = pkgs.adw-gtk3;
+  home.sessionVariables.GTK_THEME = "Adw-gtk3";
+  gtk3.extraConfig = {
+    Settings = ''
+      gtk-application-prefer-dark-theme=1
+    '';
+  };
+  gtk4.extraConfig = {
+    Settings = ''
+      gtk-application-prefer-dark-theme=1
+    '';
+  };
 
   systemd.user.startServices = "sd-switch";
 
