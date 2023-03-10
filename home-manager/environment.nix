@@ -8,9 +8,18 @@
     enable = true;
   };
 
-  gtk.enable = true;
-  gtk.theme.name = "adw-gtk3-dark";
-  gtk.theme.package = pkgs.adw-gtk3;
+  gtk = {
+    enable = true;
+    theme.name = "adw-gtk3-dark";
+    theme.package = pkgs.adw-gtk3;
+  };
+  
+  qt = {
+    enable = true;
+    style = "gtk2";
+    platformTheme = "gnome";
+  }
+ 
   
   home.shellAliases = {
     
