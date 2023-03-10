@@ -11,12 +11,6 @@
   gtk.enable = true;
   gtk.theme.name = "Adw-gtk3";
   gtk.theme.package = pkgs.adw-gtk3;
-  gtk.gtk3.extraConfig = {
-    gtk-application-prefer-dark-theme=1;
-  };
-  gtk.gtk4.extraConfig = {
-    gtk-application-prefer-dark-theme=1;
-  };
   
   home.shellAliases = {
     
