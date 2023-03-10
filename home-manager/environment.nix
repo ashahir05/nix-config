@@ -6,15 +6,11 @@
 
   programs.bash = {
     enable = true;
-    initExtra = ''
-      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-    '';
   };
 
   gtk.enable = true;
   gtk.theme.name = "Adw-gtk3";
   gtk.theme.package = pkgs.adw-gtk3;
-  home.sessionVariables.GTK_THEME = "Adw-gtk3";
   gtk.gtk3.extraConfig = {
     gtk-application-prefer-dark-theme=1;
   };
