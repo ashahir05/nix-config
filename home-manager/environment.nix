@@ -18,8 +18,7 @@
     enable = true;
     style = "gtk2";
     platformTheme = "gnome";
-  }
- 
+  }; 
   
   home.shellAliases = {
     
