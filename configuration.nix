@@ -1,5 +1,5 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
-  imports = lib.lists.remove null (lib.mapAttrsToList (key: value: if (key != "flake.nix" || key != "default.nix" key != "packages" || key != "overlays" || key != "modules") then key else null) (builtins.readDir ./.)) ++ [
+  imports = lib.lists.remove null (lib.mapAttrsToList (key: value: if (key != "flake.nix" || key != "default.nix" || key != "packages" || key != "overlays" || key != "modules") then key else null) (builtins.readDir ./.)) ++ [
     inputs.nix-index-database.hmModules.nix-index
   ];
 

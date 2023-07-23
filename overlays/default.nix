@@ -1,7 +1,7 @@
 { pkgs, lib ? pkgs.lib, inputs, ... }: final: prev:
   let
     overlayFileNames = lib.lists.remove null (lib.mapAttrsToList (key: value: if key != "default.nix" && value == "regular" && lib.strings.hasSuffix ".nix" key then key else null) (builtins.readDir ./.));
-    pkgsFileNames = lib.lists.remove null (lib.mapAttrsToList (key: value: if (value == "directory") then key else null) (builtins.readDir ../pkgs));
+    pkgsFileNames = lib.lists.remove null (lib.mapAttrsToList (key: value: if (value == "directory") then key else null) (builtins.readDir ../packages));
     overlayFiles = lib.lists.forEach overlayFileNames (file: lib.strings.removeSuffix ".nix" file);
     pkgsFiles = lib.lists.forEach pkgsFileNames (file: lib.strings.removeSuffix ".nix" file);
     overlaysSet = file:
