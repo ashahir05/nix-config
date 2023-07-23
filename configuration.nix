@@ -5,7 +5,7 @@
   
   nix = {
     registry = let 
-      flakeInputs = builtins.listToAttrs (lib.lists.remove null (lib.attrsets.mapAttrsToList (key: value: if value ? _type && value._type == "flake" && value != "nixpkgs" then { name = key; value = value; } else null) inputs));
+      flakeInputs = builtins.listToAttrs (lib.lists.remove null (lib.attrsets.mapAttrsToList (key: value: if value ? _type && value._type == "flake" && key != "nixpkgs" then { name = key; value = value; } else null) inputs));
     in 
       lib.mapAttrs (_: value: { flake = value; }) flakeInputs;
   };
