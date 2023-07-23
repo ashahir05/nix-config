@@ -1,9 +1,7 @@
 {
   description = "Ahmed's Nix Config";
 
-  inputs = {  
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    
+  inputs = {
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     
