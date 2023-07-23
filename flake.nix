@@ -2,7 +2,7 @@
   description = "Ahmed's Nix Config";
 
   inputs = {  
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -54,14 +54,14 @@
       homeConfigurations = {
         "ashahir05@ashahir-LP" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = { inherit inputs outputs; lpkgs = packages.x86_64-linux; };
           modules = [
             ./configuration.nix
           ];
         };
         "ashahir05@ashahir-PC" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = { inherit inputs outputs; lpkgs = packages.x86_64-linux; };
           modules = [
             ./configuration.nix
           ];
