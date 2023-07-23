@@ -49,5 +49,8 @@
     package = pkgs.gitFull;
     userName = "Ahmed Shahir Samin";
     userEmail = "ashahir05@gmail.com";
+    safeDirectories = [
+      "/nixos"
+    ];
   };
 }
