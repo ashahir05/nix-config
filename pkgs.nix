@@ -4,7 +4,6 @@
     zoom-us
     neovide
     bottles
-    gamemode
     localPkgs.pollymc
   ];
 }
