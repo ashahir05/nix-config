@@ -1,10 +1,10 @@
-{ inputs, outputs, lib, config, pkgs, lpkgs, ... }: {
+{ inputs, outputs, lib, config, pkgs, localPackages, ... }: {
   home.packages = with pkgs; [
     google-chrome
     zoom-us
     neovide
     bottles
     gamemode
-    lpkgs.pollymc
+    localPackages.pollymc
   ];
 }
