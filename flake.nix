@@ -40,7 +40,7 @@
     rec {    
       packages = forAllSystems (system:
         let lib = nixpkgs.lib; pkgs = import nixpkgs { inherit system; };
-        in import ./packages { inherit pkgs lib overlays; localPkgs = packages; }
+        in import ./packages { inherit pkgs lib overlays; localPkgs = packages.${system}; }
       );
       overlays = forAllSystems (system:
         let lib = nixpkgs.lib; pkgs = import nixpkgs { inherit system; };
