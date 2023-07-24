@@ -38,6 +38,8 @@
       installPhase =  ''
         mkdir $out
         cp -r ./* $out
+        
+        runHook postInstall
       '';
       
       postInstall = ''
