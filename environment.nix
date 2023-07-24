@@ -29,6 +29,11 @@
       }
     ];
   };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
   
   home.sessionPath = [
 
