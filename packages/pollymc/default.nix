@@ -37,7 +37,7 @@
         libGL
         openal
         gamemode.lib
-      ])
+      ]);
       
       unpackPhase = ''
         tar -xzf $src
