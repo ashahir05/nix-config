@@ -44,7 +44,10 @@
       '';
       
       postInstall = ''
-        makeWrapper $out/bin/pollymc --prefix LD_LIBRARY_PATH ${pkgs.gamemode}
+        mv $out/bin/pollymc $out/bin/pollymc-unwrapped
+        makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
+          --prefix LD_LIBRARY_PATH ${pkgs.gamemode} \
+          --prefix GLFW ${localPackages.glfw}
       '';
       
       pathsToLink = [
