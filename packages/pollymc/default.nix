@@ -41,7 +41,7 @@
       '';
       
       postInstall = ''
-        substituteInPlace $out/share/applications/org.fn2006.PollyMC.desktop --replace 'Exec=' 'Exec=env GLFW=${self.outputs.packages.glfw}/lib/libglfw.so '
+        substituteInPlace $out/share/applications/org.fn2006.PollyMC.desktop --replace 'Exec=' 'Exec=env GLFW=${self.outputs.packages.x86_64-linux.glfw}/lib/libglfw.so '
       '';
       
       pathsToLink = [
