@@ -14,7 +14,7 @@
       sha256 = "sha256:1wazsg0r8l0mqbzdcxp0iv322ll4yk2cv29wwm6v1cgmq7kp90bl";
     };
   in
-    stdenv.mkDerivation {
+    stdenv.mkDerivation rec {
       inherit pname name src;
       
       nativeBuildInputs = with pkgs; [
@@ -31,13 +31,6 @@
       ];
       
       dontWrapQtApp = true;
-      
-      libPaths = lib.makeLibraryPath(with pkgs; [
-        glfw
-        libGL
-        openal
-        gamemode.lib
-      ]);
       
       unpackPhase = ''
         tar -xzf $src
