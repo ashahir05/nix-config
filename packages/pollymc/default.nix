@@ -2,7 +2,7 @@
   stdenv ? (import <nixpkgs> {}).stdenv,
   lib ? (import <nixpkgs> {}).lib,
   pkgs ? (import <nixpkgs> {}),
-  packages
+  self
 }:
   let
     pname = "pollymc";
