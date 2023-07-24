@@ -53,7 +53,7 @@
       postInstall = ''
         mv $out/bin/pollymc $out/bin/pollymc-unwrapped
         makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
-          --prefix : LD_LIBRARY_PATH ${pkgs.gamemode}/lib \
+          --prefix : LD_LIBRARY_PATH ${libPaths} \
           --set GLFW ${localPkgs.glfw}/lib/libglfw.so
       '';
       
