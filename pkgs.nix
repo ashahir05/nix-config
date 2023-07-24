@@ -5,6 +5,6 @@
     neovide
     bottles
     gamemode
-    localPkgs.pollymc
+    # localPkgs.pollymc
   ];
 }
