@@ -36,7 +36,7 @@
         glfw
         libGL
         openal
-        gamemode.lib
+        gamemode
       ]);
       
       unpackPhase = ''
