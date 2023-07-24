@@ -25,7 +25,7 @@
       buildInputs = with pkgs; [
         qt5.qtbase
         libGL
-        glfw
+        localPkgs.glfw
         gamemode
       ];
       
