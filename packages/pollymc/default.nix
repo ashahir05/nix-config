@@ -32,6 +32,13 @@
       
       dontWrapQtApp = true;
       
+      libPaths = lib.makeLibraryPath(with pkgs; [
+        glfw
+        libGL
+        openal
+        gamemode.lib
+      ]);
+      
       unpackPhase = ''
         tar -xzf $src
       '';
