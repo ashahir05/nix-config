@@ -44,7 +44,7 @@
       '';
       
       postInstall = ''
-        makeWrapper $out/bin/pollymc --set LD_LIBRARY_PATH ${pkgs.gamemode}
+        makeWrapper $out/bin/pollymc --prefix LD_LIBRARY_PATH ${pkgs.gamemode}
       '';
       
       pathsToLink = [
