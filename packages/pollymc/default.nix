@@ -41,8 +41,7 @@
       '';
       
       postInstall = ''
-        substituteInPlace $out/share/applications/org.fn2006.PollyMC.desktop \
-        --replace 'Exec=' 'Exec=env GLFW=${pkgs.glfw}/lib/libglfw.so '
+        substituteInPlace $out/share/applications/org.fn2006.PollyMC.desktop --replace 'Exec=' 'Exec=env GLFW=${self.glfw}/lib/libglfw.so '
       '';
       
       pathsToLink = [
