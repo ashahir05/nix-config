@@ -43,7 +43,7 @@
       '';
       
       postInstall = ''
-        substituteInPlace $out/share/applications/org.fn2006.PollyMC.desktop --replace 'Exec=pollymc' 'Exec=env GLFW=${localPkgs.glfw}/lib/libglfw.so pollymc'
+        makeWrapper $out/bin/pollymc --set LD_LIBRARY_PATH ${pkgs.gamemode}
       '';
       
       pathsToLink = [
