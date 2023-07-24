@@ -40,7 +40,7 @@
     rec {    
       packages = forAllSystems (system:
         let lib = nixpkgs.lib; pkgs = import nixpkgs { inherit system; };
-        in import ./packages { inherit pkgs lib packages; }
+        in import ./packages { inherit pkgs lib packages overlays; }
       );
       overlays = forAllSystems (system:
         let lib = nixpkgs.lib; pkgs = import nixpkgs { inherit system; };
@@ -52,14 +52,14 @@
       homeConfigurations = {
         "ashahir05@ashahir-LP" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; lpkgs = packages.x86_64-linux; };
+          extraSpecialArgs = { inherit inputs outputs; localPkgs = packages.x86_64-linux; };
           modules = [
             ./configuration.nix
           ];
         };
         "ashahir05@ashahir-PC" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; lpkgs = packages.x86_64-linux; };
+          extraSpecialArgs = { inherit inputs outputs; localPkgs = packages.x86_64-linux; };
           modules = [
             ./configuration.nix
           ];
