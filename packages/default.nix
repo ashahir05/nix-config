@@ -1,4 +1,4 @@
-{ pkgs, lib, overlays, packages, ... }:
+{ pkgs, lib, overlays, ... }:
   let
     pkgsFileNames = lib.lists.remove null (lib.mapAttrsToList (key: value: if (value == "directory") then key else null) (builtins.readDir ./.));
     overlayFileNames = lib.lists.remove null (lib.mapAttrsToList (key: value: if (key != "default.nix" && value == "regular" && lib.strings.hasSuffix ".nix" key) then key else null) (builtins.readDir ../overlays));
