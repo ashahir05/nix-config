@@ -4,6 +4,6 @@
     zoom-us
     neovide
     bottles
-    localPkgs.pollymc
+    #localPkgs.pollymc
   ];
 }
