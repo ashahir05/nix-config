@@ -14,7 +14,7 @@
         lib.foldl (x: y: if y == (lib.lists.last parts) then { ${y} = (lib.attrsets.attrByPath parts null modifiedPkgs ); } else { ${y} = x; }) {} parts;
         
     pkgsSet = file:
-      { ${lib.lists.last (lib.strings.splitString "." file)} = modifiedPkgs.callPackage ./${file} { localPackages = packages; }; };
+      { ${lib.lists.last (lib.strings.splitString "." file)} = modifiedPkgs.callPackage ./${file} { localPackages = packages.x86_64-linux; }; };
       
     overlayPackages = (lib.foldl (a: b: a // b) {} (lib.lists.forEach overlayFiles (file: overlaysSet file)));
     newPackages = (lib.foldl (a: b: a // b) {} (lib.lists.forEach pkgsFiles (file: pkgsSet "${file}")));
