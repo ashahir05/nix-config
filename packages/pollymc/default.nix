@@ -2,7 +2,7 @@
   stdenv ? (import <nixpkgs> {}).stdenv,
   lib ? (import <nixpkgs> {}).lib,
   pkgs ? (import <nixpkgs> {}),
-  self
+  localPackages
 }:
   let
     pname = "pollymc";
@@ -41,7 +41,7 @@
       '';
       
       postInstall = ''
-        substituteInPlace $out/share/applications/org.fn2006.PollyMC.desktop --replace 'Exec=' 'Exec=env GLFW=${self.outputs.packages.x86_64-linux.glfw}/lib/libglfw.so '
+        substituteInPlace $out/share/applications/org.fn2006.PollyMC.desktop --replace 'Exec=' 'Exec=env GLFW=${localPackages.x86_64-linux.glfw}/lib/libglfw.so '
       '';
       
       pathsToLink = [
