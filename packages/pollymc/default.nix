@@ -48,7 +48,6 @@
         makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
           --prefix : LD_LIBRARY_PATH ${pkgs.gamemode}/lib \
           --set GLFW ${localPkgs.glfw}/lib/libglfw.so
-        rm $out/bin/pollymc-unwrapped
       '';
       
       pathsToLink = [
