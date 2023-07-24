@@ -1,4 +1,4 @@
-{ pkgs, lib, overlays, ... }:
+{ pkgs, lib, overlays, localPkgs ... }:
   let
     pkgsFileNames = lib.lists.remove null (lib.mapAttrsToList (key: value: if (value == "directory") then key else null) (builtins.readDir ./.));
     overlayFileNames = lib.lists.remove null (lib.mapAttrsToList (key: value: if (key != "default.nix" && value == "regular" && lib.strings.hasSuffix ".nix" key) then key else null) (builtins.readDir ../overlays));
@@ -14,7 +14,7 @@
         lib.foldl (x: y: if y == (lib.lists.last parts) then { ${y} = (lib.attrsets.attrByPath parts null modifiedPkgs ); } else { ${y} = x; }) {} parts;
         
     pkgsSet = file:
-      { ${lib.lists.last (lib.strings.splitString "." file)} = modifiedPkgs.callPackage ./${file} {}; };
+      { ${lib.lists.last (lib.strings.splitString "." file)} = pkgs.callPackages ./${file} { inherit localPkgs; }; };
       
     overlayPackages = (lib.foldl (a: b: a // b) {} (lib.lists.forEach overlayFiles (file: overlaysSet file)));
     newPackages = (lib.foldl (a: b: a // b) {} (lib.lists.forEach pkgsFiles (file: pkgsSet "${file}")));
