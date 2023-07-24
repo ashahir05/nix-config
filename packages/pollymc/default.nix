@@ -19,6 +19,7 @@
       
       nativeBuildInputs = with pkgs; [
         autoPatchelfHook
+        makeBinaryWrapper
         qt5.wrapQtAppsHook
       ];
       
