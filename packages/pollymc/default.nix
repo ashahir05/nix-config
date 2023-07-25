@@ -32,8 +32,8 @@
       
       dontWrapQtApp = true;
       
-      libPaths = lib.makeLibraryPath(with pkgs; [
-        glfw
+      libPath = lib.makeLibraryPath(with pkgs; [
+        localPkgs.glfw
         libGL
         openal
         gamemode
@@ -53,8 +53,9 @@
       postInstall = ''
         mv $out/bin/pollymc $out/bin/pollymc-unwrapped
         makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
-          --prefix : LD_LIBRARY_PATH ${libPaths} \
+          --prefix : LD_LIBRARY_PATH /run/opengl-driver/lib:${libPath} \
           --set GLFW ${localPkgs.glfw}/lib/libglfw.so
+          --set OPENAL ${pkgs.openal}/lib/libopenal.so
       '';
       
       pathsToLink = [
