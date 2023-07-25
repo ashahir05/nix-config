@@ -54,7 +54,7 @@
         mv $out/bin/pollymc $out/bin/pollymc-unwrapped
         makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
           --prefix : LD_LIBRARY_PATH /run/opengl-driver/lib:${libPath} \
-          --set OPENGL ${pkgs.opengl}/lib/libOpenGL.so \
+          --set OPENGL ${pkgs.libGL}/lib/libOpenGL.so \
           --set GLFW ${localPkgs.glfw}/lib/libglfw.so \
           --set OPENAL ${pkgs.openal}/lib/libopenal.so
       '';
