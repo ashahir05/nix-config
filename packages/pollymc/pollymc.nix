@@ -24,7 +24,6 @@
       
       buildInputs = with pkgs; [
         qt5.qtbase
-        libGL
       ] ++ xorgPkgs;
       
       xorgPkgs = with pkgs.xorg; [
@@ -54,7 +53,8 @@
       
       postInstall = ''
         mv $out/bin/pollymc $out/bin/pollymc-unwrapped
-        makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc
+        makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
+          --prefix LD_LIBRARY_PATH : /run/opengl-driver/lib/
       '';
       
       pathsToLink = [
