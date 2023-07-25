@@ -3,6 +3,7 @@
   stdenv ? (import <nixpkgs> {}).stdenv,
   lib ? (import <nixpkgs> {}).lib,
   pkgs ? (import <nixpkgs> {}),
+  ...
 }: 
 let
   pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs; };
