@@ -13,6 +13,7 @@ in
     
     targetPkgs = pkgs: (with pkgs; [
       pollymc
+      zlib
       openjdk17
     ]);
     
