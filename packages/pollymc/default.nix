@@ -14,6 +14,7 @@ in
     targetPkgs = pkgs: (with pkgs; [
       pollymc
       gamemode
+      openjdk17
       zlib
     ]);
     

@@ -24,8 +24,6 @@
       
       buildInputs = with pkgs; [
         qt5.qtbase
-        openjdk17
-        gamemode
       ] ++ xorgPkgs;
       
       xorgPkgs = with pkgs.xorg; [
