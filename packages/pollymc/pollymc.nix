@@ -1,8 +1,7 @@
 { 
   stdenv ? (import <nixpkgs> {}).stdenv,
   lib ? (import <nixpkgs> {}).lib,
-  pkgs ? (import <nixpkgs> {}),
-  localPkgs
+  pkgs ? (import <nixpkgs> {})
 }:
   let
     pname = "pollymc";
@@ -37,24 +36,11 @@
       
       buildInputs = with pkgs; [
         qt5.qtbase
-        libGL
-        localPkgs.glfw
-        openal
-        flite
-        freetype
-        fontconfig
       ] ++ xorgPkgs;
       
       dontWrapQtApp = true;
       
-      libPath = lib.makeLibraryPath(with pkgs; [
-        libGL
-        localPkgs.glfw
-        openal
-        flite
-        freetype
-        fontconfig
-      ] ++ xorgPkgs);
+      libPath = lib.makeLibraryPath(xorgPkgs);
       
       unpackPhase = ''
         tar -xzf $src
@@ -69,8 +55,7 @@
       
       postInstall = ''
         mv $out/bin/pollymc $out/bin/pollymc-unwrapped
-        makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
-          --set LD_LIBRARY_PATH /run/opengl-driver/lib:${libPath}
+        makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc
       '';
       
       pathsToLink = [
