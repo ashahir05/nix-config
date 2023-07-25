@@ -12,19 +12,8 @@ in
     name = "pollymc";
     
     targetPkgs = pkgs: (with pkgs; [
-      qt5.qtbase
-      freetype
-      fontconfig
-    ]) ++ (with pkgs.xorg; [
-      libXext
-      libX11
-      libXext
-      libXcursor
-      libXrandr
-      libXxf86vm
-      libXrender
-      libXtst
-      libXi
+      pollymc
+      openjdk17
     ]);
     
     extraInstallCommands = ''
