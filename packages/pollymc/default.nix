@@ -13,16 +13,6 @@
       url = "https://github.com/fn2006/PollyMC/releases/download/${version}/PollyMC-Linux-${version}.tar.gz";
       sha256 = "sha256:1wazsg0r8l0mqbzdcxp0iv322ll4yk2cv29wwm6v1cgmq7kp90bl";
     };
-    
-    xorgPkgs = with pkgs.xorg; [
-        libXext
-        libX11
-        libXext
-        libXcursor
-        libXrandr
-        libXxf86vm
-        libXrender
-      ];
   in
     stdenv.mkDerivation rec {
       inherit pname name src;
@@ -31,6 +21,16 @@
         autoPatchelfHook
         makeBinaryWrapper
         qt5.wrapQtAppsHook
+      ];
+      
+      xorgPkgs = with pkgs.xorg; [
+        libXext
+        libX11
+        libXext
+        libXcursor
+        libXrandr
+        libXxf86vm
+        libXrender
       ];
       
       buildInputs = with pkgs; [
