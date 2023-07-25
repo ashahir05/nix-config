@@ -12,6 +12,7 @@ in
     name = "pollymc";
     
     targetPkgs = pkgs: (with pkgs; [
+      openal
       pollymc
       zlib
       openjdk17
