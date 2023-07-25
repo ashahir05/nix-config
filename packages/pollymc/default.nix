@@ -33,13 +33,13 @@
         libXrender
         libXtst
         libXi
-        fontconfig
       ];
       
       buildInputs = with pkgs; [
         qt5.qtbase
         libGL
         localPkgs.glfw
+        fontconfig
         openal
         flite
       ] ++ xorgPkgs;
@@ -49,6 +49,7 @@
       libPath = lib.makeLibraryPath(with pkgs; [
         libGL
         localPkgs.glfw
+        fontconfig
         openal
         flite
       ] ++ xorgPkgs);
