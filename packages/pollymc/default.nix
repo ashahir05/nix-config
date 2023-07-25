@@ -14,6 +14,7 @@ in
     targetPkgs = pkgs: (with pkgs; [
       pollymc
       openjdk17
+      zlib
     ]);
     
     extraInstallCommands = ''
