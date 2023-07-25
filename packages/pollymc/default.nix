@@ -28,6 +28,7 @@
         libGL
         localPkgs.glfw
         openal
+        flite
       ];
       
       dontWrapQtApp = true;
@@ -36,6 +37,7 @@
         libGL
         localPkgs.glfw
         openal
+        flite
       ]);
       
       unpackPhase = ''
