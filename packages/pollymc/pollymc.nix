@@ -24,6 +24,8 @@
       
       buildInputs = with pkgs; [
         qt5.qtbase
+        freetype
+        fontconfig
       ] ++ xorgPkgs;
       
       xorgPkgs = with pkgs.xorg; [
@@ -38,8 +40,12 @@
         libXi
       ];
       
-      dontWrapQtApp = true;
-      
+      libPath = lib.makeLibraryPath(with pkgs; [
+          libGL
+          freetype
+          fontconfig
+        ] ++ xorgPkgs);
+
       unpackPhase = ''
         tar -xzf $src
       '';
@@ -54,7 +60,7 @@
       postInstall = ''
         mv $out/bin/pollymc $out/bin/pollymc-unwrapped
         makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
-          --prefix LD_LIBRARY_PATH : /run/opengl-driver/lib/
+          --prefix LD_LIBRARY_PATH : /run/opengl-driver/lib
       '';
       
       pathsToLink = [

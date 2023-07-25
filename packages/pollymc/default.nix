@@ -13,7 +13,6 @@ in
     
     targetPkgs = pkgs: (with pkgs; [
       pollymc
-      libGL
       gamemode
       openjdk17
       zlib
