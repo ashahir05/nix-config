@@ -33,6 +33,7 @@
         libXrender
         libXtst
         libXi
+        libfreetype
       ];
       
       buildInputs = with pkgs; [
