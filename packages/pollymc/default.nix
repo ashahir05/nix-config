@@ -48,7 +48,7 @@
         localPkgs.glfw
         openal
         flite
-      ]) ++ xorgPkgs;
+      ] ++ xorgPkgs);
       
       unpackPhase = ''
         tar -xzf $src
