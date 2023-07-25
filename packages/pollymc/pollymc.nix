@@ -26,6 +26,7 @@
         qt5.qtbase
         freetype
         fontconfig
+        flite
       ] ++ xorgPkgs;
       
       xorgPkgs = with pkgs.xorg; [
@@ -44,6 +45,7 @@
           libGL
           freetype
           fontconfig
+          flite
         ] ++ xorgPkgs);
 
       unpackPhase = ''
