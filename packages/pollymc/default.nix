@@ -15,6 +15,7 @@ in
       pollymc
       openjdk17
       zlib
+      gamemode
     ]);
     
     extraInstallCommands = ''
