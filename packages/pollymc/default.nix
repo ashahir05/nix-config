@@ -6,7 +6,7 @@
   localPkgs
 }: 
 let
-  pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs localPkgs; }
+  pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs localPkgs; };
 in
   buildFHSEnv {
     name = "pollymc";
