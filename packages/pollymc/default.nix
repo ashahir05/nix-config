@@ -40,7 +40,7 @@
       
       dontWrapQtApp = true;
       
-      libPath = lib.makeLibraryPath(with pkgs; [
+      libPath = lib.makeLibraryPath((with pkgs; [
         libGL
         localPkgs.glfw
         openal
@@ -52,7 +52,7 @@
         libXcursor
         libXrandr
         libXxf86vm
-      ]);
+      ]));
       
       unpackPhase = ''
         tar -xzf $src
