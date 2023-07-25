@@ -31,6 +31,7 @@
         libXrandr
         libXxf86vm
         libXrender
+        libXtst
       ];
       
       buildInputs = with pkgs; [
