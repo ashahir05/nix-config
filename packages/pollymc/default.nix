@@ -13,6 +13,16 @@
       url = "https://github.com/fn2006/PollyMC/releases/download/${version}/PollyMC-Linux-${version}.tar.gz";
       sha256 = "sha256:1wazsg0r8l0mqbzdcxp0iv322ll4yk2cv29wwm6v1cgmq7kp90bl";
     };
+    
+    xorgPkgs = with pkgs.xorg; [
+        libXext
+        libX11
+        libXext
+        libXcursor
+        libXrandr
+        libXxf86vm
+        libXrender
+      ];
   in
     stdenv.mkDerivation rec {
       inherit pname name src;
@@ -23,36 +33,22 @@
         qt5.wrapQtAppsHook
       ];
       
-      buildInputs = (with pkgs; [
+      buildInputs = with pkgs; [
         qt5.qtbase
         libGL
         localPkgs.glfw
         openal
         flite
-      ]) ++ (with pkgs.xorg; [
-        libXext
-        libX11
-        libXext
-        libXcursor
-        libXrandr
-        libXxf86vm
-      ]);
+      ] ++ xorgPkgs;
       
       dontWrapQtApp = true;
       
-      libPath = lib.makeLibraryPath((with pkgs; [
+      libPath = lib.makeLibraryPath(with pkgs; [
         libGL
         localPkgs.glfw
         openal
         flite
-      ]) ++ (with pkgs.xorg; [
-        libXext
-        libX11
-        libXext
-        libXcursor
-        libXrandr
-        libXxf86vm
-      ]));
+      ]) ++ xorgPackages;
       
       unpackPhase = ''
         tar -xzf $src
