@@ -42,6 +42,7 @@
         openal
         flite
         freetype
+        fontconfig
       ] ++ xorgPkgs;
       
       dontWrapQtApp = true;
@@ -52,6 +53,7 @@
         openal
         flite
         freetype
+        fontconfig
       ] ++ xorgPkgs);
       
       unpackPhase = ''
