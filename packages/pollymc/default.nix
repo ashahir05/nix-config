@@ -23,7 +23,7 @@
         qt5.wrapQtAppsHook
       ];
       
-      buildInputs = with pkgs; [
+      buildInputs = (with pkgs; [
         qt5.qtbase
         libGL
         localPkgs.glfw
@@ -36,7 +36,7 @@
         libXcursor
         libXrandr
         libXxf86vm
-      ];
+      ]);
       
       dontWrapQtApp = true;
       
