@@ -3,19 +3,16 @@
   stdenv ? (import <nixpkgs> {}).stdenv,
   lib ? (import <nixpkgs> {}).lib,
   pkgs ? (import <nixpkgs> {}),
-  localPkgs
 }: 
 let
-  pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs localPkgs; };
+  pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs; };
 in
   buildFHSUserEnv {
     name = "pollymc";
     
     targetPkgs = pkgs: (with pkgs; [
       pollymc
-      openjdk17
       zlib
-      gamemode
     ]);
     
     extraInstallCommands = ''

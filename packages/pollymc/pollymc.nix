@@ -22,6 +22,12 @@
         qt5.wrapQtAppsHook
       ];
       
+      buildInputs = with pkgs; [
+        qt5.qtbase
+        openjdk17
+        gamemode
+      ] ++ xorgPkgs;
+      
       xorgPkgs = with pkgs.xorg; [
         libXext
         libX11
@@ -34,13 +40,7 @@
         libXi
       ];
       
-      buildInputs = with pkgs; [
-        qt5.qtbase
-      ] ++ xorgPkgs;
-      
       dontWrapQtApp = true;
-      
-      libPath = lib.makeLibraryPath(xorgPkgs);
       
       unpackPhase = ''
         tar -xzf $src
