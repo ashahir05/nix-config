@@ -39,9 +39,9 @@
         qt5.qtbase
         libGL
         localPkgs.glfw
-        fontconfig
         openal
         flite
+        freetype
       ] ++ xorgPkgs;
       
       dontWrapQtApp = true;
@@ -49,9 +49,9 @@
       libPath = lib.makeLibraryPath(with pkgs; [
         libGL
         localPkgs.glfw
-        fontconfig
         openal
         flite
+        freetype
       ] ++ xorgPkgs);
       
       unpackPhase = ''
