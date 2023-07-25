@@ -44,7 +44,7 @@
       );
       overlays = forAllSystems (system:
         let lib = nixpkgs.lib; pkgs = import nixpkgs { inherit system; };
-        in import ./overlays { inherit pkgs lib inputs; }
+        in import ./overlays { inherit pkgs lib inputs; localPkgs = packages.${system}; }
       );
         
       homeManagerModules = import ./modules;
