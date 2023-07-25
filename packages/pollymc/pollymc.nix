@@ -24,6 +24,7 @@
       
       buildInputs = with pkgs; [
         qt5.qtbase
+        libGL
       ] ++ xorgPkgs;
       
       xorgPkgs = with pkgs.xorg; [
