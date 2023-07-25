@@ -33,7 +33,7 @@
         libXrender
         libXtst
         libXi
-        libfreetype
+        fontconfig
       ];
       
       buildInputs = with pkgs; [
