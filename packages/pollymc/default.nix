@@ -29,7 +29,7 @@
         localPkgs.glfw
         openal
         flite
-      ] ++ with pkgs.xorg; [
+      ]) ++ (with pkgs.xorg; [
         libXext
         libX11
         libXext
@@ -45,7 +45,7 @@
         localPkgs.glfw
         openal
         flite
-      ] ++ with pkgs.xorg; [
+      ]) ++ (with pkgs.xorg; [
         libXext
         libX11
         libXext
