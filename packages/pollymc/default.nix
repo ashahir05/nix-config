@@ -8,13 +8,11 @@
 let
   pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs localPkgs; };
 in
-  buildFHSEnv {
+  buildFHSUserEnv {
     name = "pollymc";
     
     targetPkgs = pkgs: (with pkgs; [
-      openal
       pollymc
-      zlib
       openjdk17
     ]);
     
