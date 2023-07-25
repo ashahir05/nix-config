@@ -24,6 +24,7 @@
       
       buildInputs = with pkgs; [
         qt5.qtbase
+        libGL
         freetype
         fontconfig
         flite
@@ -62,7 +63,7 @@
       postInstall = ''
         mv $out/bin/pollymc $out/bin/pollymc-unwrapped
         makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
-          --prefix LD_LIBRARY_PATH : /run/opengl-driver/lib:${libPath}
+          --set LD_LIBRARY_PATH /run/opengl-driver/lib:${libPath}
       '';
       
       pathsToLink = [
