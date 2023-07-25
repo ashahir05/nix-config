@@ -29,7 +29,13 @@
         localPkgs.glfw
         openal
         flite
-        xorg.libXext
+      ] ++ with pkgs.xorg; [
+        libXext
+        libX11
+        libXext
+        libXcursor
+        libXrandr
+        libXxf86vm
       ];
       
       dontWrapQtApp = true;
@@ -39,7 +45,13 @@
         localPkgs.glfw
         openal
         flite
-        xorg.libXext
+      ] ++ with pkgs.xorg; [
+        libXext
+        libX11
+        libXext
+        libXcursor
+        libXrandr
+        libXxf86vm
       ]);
       
       unpackPhase = ''
