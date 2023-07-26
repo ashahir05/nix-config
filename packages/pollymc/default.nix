@@ -1,5 +1,5 @@
 { 
-  buildFHSUserEnv ? (import <nixpkgs> {}).buildFHSUserEnv,
+  buildFHSEnv ? (import <nixpkgs> {}).buildFHSEnv,
   stdenv ? (import <nixpkgs> {}).stdenv,
   lib ? (import <nixpkgs> {}).lib,
   pkgs ? (import <nixpkgs> {}),
