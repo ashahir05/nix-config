@@ -18,16 +18,6 @@
       url = "github:paperwm/PaperWM";
       flake = false;
     };
-    
-    glfw-src = {
-      url = "github:glfw/glfw";
-      flake = false;
-    };
-    
-    pollymc-src = {
-      url = "github:fn2006/PollyMC";
-      flake = false;
-    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

@@ -23,11 +23,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1690084763,
-        "narHash": "sha256-Nw680m/pyVoosSgXZW415Z657mfVM2BxaxDPjEk48Z0=",
+        "lastModified": 1690303752,
+        "narHash": "sha256-2YiwFHQERGoaORNORmsdmVlPD8CVVwlwbV2+f77sFhg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "fb03fa5516d4e86059d24ab35a611ffa3a359547",
+        "rev": "ba2c0737cc848db03470828fdb5e86df75ed42a8",
         "type": "github"
       },
       "original": {
@@ -52,11 +52,11 @@
     "paperwm-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1690030089,
-        "narHash": "sha256-Fu1KpJGfOPu7c73rcYDLfjSWH4bh6QKUZT0usoQrbOA=",
+        "lastModified": 1690369650,
+        "narHash": "sha256-eu5/xGhG3/4KwtijVTGHdxRUCf2huewCwB+TOpq10aw=",
         "owner": "paperwm",
         "repo": "PaperWM",
-        "rev": "57c8db67ff3a2dee8d1570dd9dcc4978c2d200be",
+        "rev": "9101b748415edbe9ba8da56d5c7cd49b13d8bddb",
         "type": "github"
       },
       "original": {
