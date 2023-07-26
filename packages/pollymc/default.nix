@@ -40,10 +40,10 @@ in
   buildFHSUserEnv {
     name = "pollymc";
     
-    targetPkgs = with pkgs; [
+    targetPkgs = (pkgs: with pkgs; [
       pollymc
       zlib
-    ] ++ runtimeDeps;
+    ] ++ runtimeDeps);
     
     extraInstallCommands = ''
       ln -s "${pollymc}/share" "$out/"
