@@ -1,5 +1,5 @@
 { 
-  buildFHSEnv ? (import <nixpkgs> {}).buildFHSEnv,
+  buildFHSUserEnv ? (import <nixpkgs> {}).buildFHSUserEnv,
   stdenv ? (import <nixpkgs> {}).stdenv,
   lib ? (import <nixpkgs> {}).lib,
   pkgs ? (import <nixpkgs> {}),
@@ -37,13 +37,13 @@ let
   
   pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs libPath; };
 in
-  buildFHSEnv {
+  buildFHSUserEnv {
     name = "pollymc";
     
-    targetPkgs = pkgs: (with pkgs; [
+    targetPkgs = with pkgs; [
       pollymc
       zlib
-    ] ++ runtimeDeps);
+    ] ++ runtimeDeps;
     
     extraInstallCommands = ''
       ln -s "${pollymc}/share" "$out/"
