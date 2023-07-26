@@ -1,7 +1,8 @@
 { 
   stdenv ? (import <nixpkgs> {}).stdenv,
   lib ? (import <nixpkgs> {}).lib,
-  pkgs ? (import <nixpkgs> {})
+  pkgs ? (import <nixpkgs> {}),
+  libPath
 }:
   let
     pname = "pollymc";
@@ -21,33 +22,6 @@
         makeBinaryWrapper
         qt5.wrapQtAppsHook
       ];
-      
-      buildInputs = with pkgs; [
-        qt5.qtbase
-        libGL
-        freetype
-        fontconfig
-        flite
-      ] ++ xorgPkgs;
-      
-      xorgPkgs = with pkgs.xorg; [
-        libXext
-        libX11
-        libXext
-        libXcursor
-        libXrandr
-        libXxf86vm
-        libXrender
-        libXtst
-        libXi
-      ];
-      
-      libPath = lib.makeLibraryPath(with pkgs; [
-          libGL
-          freetype
-          fontconfig
-          flite
-        ] ++ xorgPkgs);
 
       unpackPhase = ''
         tar -xzf $src

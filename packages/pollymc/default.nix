@@ -6,17 +6,39 @@
   ...
 }: 
 let
-  pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs; };
+  runtimeDeps = with pkgs; [
+    gamemode
+    openjdk17
+    qt5.qtbase
+    libGL
+    freetype
+    fontconfig
+    flite
+  ] ++ xorgPkgs;
+
+  xorgPkgs = with pkgs.xorg; [
+    libXext
+    libX11
+    libXext
+    libXcursor
+    libXrandr
+    libXxf86vm
+    libXrender
+    libXtst
+    libXi
+  ];
+
+  libPath = lib.makeLibraryPath(runtimeDeps);
+  
+  pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs libPath; };
 in
   buildFHSUserEnv {
     name = "pollymc";
     
     targetPkgs = pkgs: (with pkgs; [
       pollymc
-      gamemode
-      openjdk17
       zlib
-    ]);
+    ] ++ runtimeDeps);
     
     extraInstallCommands = ''
       ln -s "${pollymc}/share" "$out/"
