@@ -13,6 +13,7 @@ let
     libGL
     glfw
     openal
+    pipewire
     freetype
     fontconfig
     flite
