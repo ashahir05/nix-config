@@ -11,6 +11,8 @@ let
     openjdk17
     qt5.qtbase
     libGL
+    glfw
+    openal
     freetype
     fontconfig
     flite
