@@ -13,7 +13,9 @@ let
     libGL
     glfw
     openal
-    pipewire
+    alsa-lib
+    libao
+    pulseaudio
     freetype
     fontconfig
     flite
