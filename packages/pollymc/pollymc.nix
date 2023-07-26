@@ -37,7 +37,7 @@
       postInstall = ''
         mv $out/bin/pollymc $out/bin/pollymc-unwrapped
         makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
-          --set LD_LIBRARY_PATH /run/opengl-driver/lib:${libPath}
+          --set LD_LIBRARY_PATH /run/opengl-driver/lib:${libPath} \
           --set mesa_glthread true
       '';
       
