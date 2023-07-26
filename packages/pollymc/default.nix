@@ -37,7 +37,7 @@ let
   
   pollymc = pkgs.callPackage ./pollymc.nix { inherit stdenv lib pkgs libPath; };
 in
-  buildFHSUserEnv {
+  buildFHSEnv {
     name = "pollymc";
     
     targetPkgs = pkgs: (with pkgs; [
