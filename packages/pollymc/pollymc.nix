@@ -38,8 +38,8 @@
         mv $out/bin/pollymc $out/bin/pollymc-unwrapped
         makeWrapper $out/bin/pollymc-unwrapped $out/bin/pollymc \
           --set LD_LIBRARY_PATH /run/opengl-driver/lib:${libPath} \
-          --set mesa_glthread =true \
-          --set MESA_LOADER_DRIVER_OVERRIDE=zink
+          --set mesa_glthread true \
+          --set MESA_LOADER_DRIVER_OVERRIDE zink
       '';
       
       pathsToLink = [
