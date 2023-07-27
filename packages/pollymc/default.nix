@@ -11,7 +11,7 @@ let
     openjdk17
     qt5.qtbase
     libGL
-    glfw
+    glfw-wayland
     openal
     alsa-lib
     libao
