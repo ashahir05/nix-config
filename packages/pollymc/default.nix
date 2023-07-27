@@ -12,7 +12,6 @@ let
     qt5.qtbase
     libGL
     glfw
-    gamescope
     openal
     alsa-lib
     libao
