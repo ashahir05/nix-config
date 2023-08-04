@@ -20,10 +20,10 @@
       # `gnome-extensions list` for a list
       enabled-extensions = [
 	      "appindicatorsupport@rgcjonas.gmail.com"
-      	      "drive-menu@gnome-shell-extensions.gcampax.github.com"
-	      "espresso@coadmunkee.github.com"
+	      "drive-menu@gnome-shell-extensions.gcampax.github.com"
+	      "caffeine@patapon.info"
 	      "paperwm@hedning:matrix.org"
-              "clipboard-history@alexsaveau.dev"
+        "clipboard-history@alexsaveau.dev"
       ];
     };
     
