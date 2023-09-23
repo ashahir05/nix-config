@@ -5,5 +5,6 @@
     neovide
     bottles
     kicad
+    jdk
   ];
 }
