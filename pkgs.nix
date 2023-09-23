@@ -7,5 +7,6 @@
     kicad
     jdk
     libGL
+    libGLU
   ];
 }
