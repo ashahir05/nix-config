@@ -9,6 +9,7 @@
     libGL
     glfw
     openal
+    libpulseaudio
     flite
   ];
 }
