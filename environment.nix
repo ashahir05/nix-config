@@ -45,6 +45,7 @@
   
   home.sessionVariables = {
     XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS";
+    LD_LIBRARY_PATH="$HOME/.nix-profile/lib:$LD_LIBRARY_PATH";
     NEOVIDE_FRAME = "none";
     NEOVIDE_MULTIGRID = "true";
     WINIT_WAYLAND_CSD_THEME= "dark";
