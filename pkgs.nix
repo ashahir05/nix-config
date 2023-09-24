@@ -6,5 +6,9 @@
     bottles
     kicad
     jdk
+    libGL
+    glfw
+    openal
+    flite
   ];
 }
