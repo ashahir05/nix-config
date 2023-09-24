@@ -6,6 +6,8 @@
     bottles
     kicad
     jdk
+    libGL
     libGL.dev
+    glfw
   ];
 }
