@@ -11,5 +11,6 @@
     openal
     libpulseaudio
     flite
+    xorg.libXxf86vm
   ];
 }
