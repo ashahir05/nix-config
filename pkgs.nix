@@ -8,6 +8,6 @@
     jdk
     libGL
     libGL.dev
-    glfw
+    openal
   ];
 }
