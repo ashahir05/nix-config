@@ -13,8 +13,8 @@
     flite
     xorg.libX11
     xorg.libXxf86vm
-    xorg.Xext
-    xorg.Xcursor
-    xorg.Xrandr
+    xorg.libXext
+    xorg.libXcursor
+    xorg.libXrandr
   ];
 }
