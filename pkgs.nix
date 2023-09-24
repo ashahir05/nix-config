@@ -10,5 +10,6 @@
     libGL.dev
     glfw
     openal
+    flite
   ];
 }
