@@ -5,5 +5,18 @@
     neovide
     bottles
     kicad
+
+    jdk
+
+    libGL
+    glfw
+    libpulseaudio
+    openal
+    flite
+    xorg.Xcursor
+    xorg.Xrandr
+    xorg.Xext
+    xorg.X11
+    xorg.Xxf86vm
   ];
 }
