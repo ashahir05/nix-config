@@ -13,10 +13,10 @@
     libpulseaudio
     openal
     flite
-    xorg.Xcursor
-    xorg.Xrandr
-    xorg.Xext
-    xorg.X11
-    xorg.Xxf86vm
+    xorg.libXcursor
+    xorg.libXrandr
+    xorg.libXext
+    xorg.libX11
+    xorg.libXxf86vm
   ];
 }
