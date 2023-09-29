@@ -4,5 +4,6 @@
     zoom-us
     neovide
     bottles
+    steam
   ];
 }
