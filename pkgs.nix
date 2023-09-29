@@ -4,6 +4,5 @@
     zoom-us
     neovide
     bottles
-    kicad
   ];
 }
