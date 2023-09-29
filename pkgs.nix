@@ -4,6 +4,9 @@
     zoom-us
     neovide
     bottles
-    steam
   ];
+
+  programs.steam = {
+    enable = true;
+  };
 }
