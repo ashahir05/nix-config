@@ -27,7 +27,7 @@
       ];
     };
     
-    /* "org/gnome/shell/extensions/paperwm" = {
+    "org/gnome/shell/extensions/paperwm" = {
       use-default-background = true;
       vertical-margin = 10;
       vertical-margin-bottom = 10;
@@ -60,7 +60,7 @@
       workspaces-only-on-primary = false;
       edge-tiling = false;
       attach-modal-dialogs = false;
-    }; */
+    };
     
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = "nothing";
