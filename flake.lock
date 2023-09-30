@@ -45,6 +45,7 @@
       },
       "original": {
         "owner": "paperwm",
+        "ref": "release",
         "repo": "PaperWM",
         "type": "github"
       }
