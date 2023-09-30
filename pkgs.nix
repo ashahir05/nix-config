@@ -5,8 +5,4 @@
     neovide
     bottles
   ];
-
-  programs.steam = {
-    enable = true;
-  };
 }

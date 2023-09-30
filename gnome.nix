@@ -27,7 +27,7 @@
       ];
     };
     
-    "org/gnome/shell/extensions/paperwm" = {
+    /* "org/gnome/shell/extensions/paperwm" = {
       use-default-background = true;
       vertical-margin = 10;
       vertical-margin-bottom = 10;
@@ -54,17 +54,13 @@
       toggle-scratch-layer = [ "<Super>s" ];
       toggle-scratch = [ "<Alt><Shift>s" ];
       toggle-scratch-window = [ "<Control><Shift>s" ];
-    };
-    
-    "org/gnome/shell/extensions/espresso" = {
-      show-notifications = false;
-    };
+    }; 
     
     "org/gnome/shell/overrides" = {
       workspaces-only-on-primary = false;
       edge-tiling = false;
       attach-modal-dialogs = false;
-    };
+    }; */
     
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = "nothing";
@@ -79,7 +75,7 @@
       switch-applications-backwards = [];
       switch-windows = [
         "<Super>Tab"
-	"<Alt>Tab"
+        "<Alt>Tab"
       ];
       switch-windows-backward = [
         "<Shift><Super>Tab"
@@ -87,7 +83,7 @@
       ];
       close = [
         "<Super>Q"
-	"<Alt>F4"
+        "<Alt>F4"
       ];
       minimize = [ "<Super>m" ];
     };
