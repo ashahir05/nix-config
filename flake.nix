@@ -15,7 +15,7 @@
     };
     
     paperwm-src = {
-      url = "github:paperwm/PaperWM";
+      url = "github:paperwm/PaperWM/release";
       flake = false;
     };
   };
