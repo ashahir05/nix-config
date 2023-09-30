@@ -18,7 +18,7 @@
       url = "github:paperwm/PaperWM/release";
       flake = false;
     };
-  };d
+  };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
