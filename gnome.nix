@@ -22,7 +22,7 @@
 	      "appindicatorsupport@rgcjonas.gmail.com"
 	      "drive-menu@gnome-shell-extensions.gcampax.github.com"
 	      "caffeine@patapon.info"
-	      "paperwm@hedning:matrix.org"
+	      "paperwm@paperwm.github.com"
         "clipboard-history@alexsaveau.dev"
       ];
     };
